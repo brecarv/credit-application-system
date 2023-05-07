@@ -10,7 +10,7 @@ class CustomerService(
     private val customerRepository: CustomerRepository
 ) : ICustomerService {
     override fun save(customer: Customer): Customer =
-        this.customerRepository.save(customer);
+        this.customerRepository.save(customer)
 
     override fun findById(id: Long): Customer =
         this.customerRepository.findById(id).orElseThrow {
